@@ -1,0 +1,11 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+# Enable Pyflakes (F), pycodestyle (E), and isort (I)
+select = ["E", "F", "I"]
