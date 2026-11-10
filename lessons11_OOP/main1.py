@@ -38,11 +38,11 @@ character.take_damage(30)
 
 
 class Card:
-    def __init__(self, owner) -> None:
+    def __init__(self, owner: str) -> None:
         self.owner = owner
         self.items = []
 
-    def add_item(self, name, price):
+    def add_item(self, name: str, price: float) -> None:
         self.items.append(
             {
                 "name": name,
