@@ -56,9 +56,6 @@ class TaskUpdateSchema(BaseModel):
     completed: bool | None = None
 
 
-tasks: list[TaskSchema] = []
-
-
 def get_db():
     db = Sessionlocal()
     try:
