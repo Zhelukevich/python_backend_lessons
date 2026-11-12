@@ -3,7 +3,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 
-class TaskRepositories:
+class TaskRepository:
     def __init__(self, db: Session) -> None:
         self.db = db
 
@@ -16,7 +16,7 @@ class TaskRepositories:
     def create(self, title: str) -> TaskORM:
         new_task = TaskORM(title=title, completed=False)
         self.db.add(new_task)
-        self.db.flush()
+        self.db.flush()  # выдаёт id и применяет defaults, не коммитит
         return new_task
 
     def delete(self, task: TaskORM) -> None:

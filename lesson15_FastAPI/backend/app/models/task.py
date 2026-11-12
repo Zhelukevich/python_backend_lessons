@@ -1,9 +1,8 @@
+from app.models.base import Base, IdMixin
 from sqlalchemy.orm import Mapped, mapped_column
 
-from .base import Base
 
-
-class TaskORM(Base):
+class TaskORM(IdMixin, Base):
     __tablename__ = "tasks"
 
     title: Mapped[str]
