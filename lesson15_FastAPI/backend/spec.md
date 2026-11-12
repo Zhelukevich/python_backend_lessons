@@ -40,7 +40,7 @@ docker logs pg-container
 ### 1.5 Запуск приложения *(в отдельном терминале)*
 
 ```bash
-uvicorn main:app --port 8080 --reload
+uvicorn app.main:app --port 8080 --reload
 ```
 
 ---
@@ -81,7 +81,7 @@ python -c "from main import app; print('OK')"
 ### 4.2 Запуск с логами в файл
 
 ```bash
-uvicorn main:app --port 8080 --reload --log-level debug 2>&1 | tee app.log
+uvicorn app.main:app --port 8080 --reload --log-level debug 2>&1 | tee app.log
 ```
 
 ### 4.3 Проверка, свободен ли порт 8080
