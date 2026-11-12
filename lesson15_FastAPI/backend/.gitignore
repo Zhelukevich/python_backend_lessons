@@ -33,3 +33,5 @@ htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
+
+backup.sql

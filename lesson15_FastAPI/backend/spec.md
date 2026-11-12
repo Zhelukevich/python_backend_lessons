@@ -75,7 +75,7 @@ uvicorn app.main:app --port 8080 --reload
 ### 4.1 Проверка сборки без ошибок
 
 ```bash
-python -c "from main import app; print('OK')"
+python -c "from app.main import app; print('OK')"
 ```
 
 ### 4.2 Запуск с логами в файл
